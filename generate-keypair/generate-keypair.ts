@@ -1,5 +1,3 @@
-// TODO: run `npx esrun generate-keypair.ts` to test the script
-
 import { Keypair } from '@solana/web3.js';
 import 'dotenv/config';
 import { getKeypairFromEnvironment } from '@solana-developers/helpers';
