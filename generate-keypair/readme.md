@@ -1,5 +1,9 @@
 ## Run
 
-`npm install`
+```bash
+npm install
+```
 
-`npx esrun generate-keypair.ts`
+```bash
+npx esrun generate-keypair.ts
+```
