@@ -25,7 +25,7 @@ export default function RootLayout({
           <SolanaWalletProviders>
             <Header />
             <main>
-              <div className="min-h-[calc(100vh-8rem)]">{children}</div>
+              <div className="min-h-[calc(100vh-4rem-60px)]">{children}</div>
             </main>
             <Footer />
           </SolanaWalletProviders>

@@ -29,6 +29,10 @@ export default function Header() {
       label: 'Home',
       link: '/',
     },
+    {
+      label: 'Send Sol',
+      link: '/send-sol',
+    },
   ];
 
   return (
