@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Card, CardBody, Input } from '@nextui-org/react';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import * as web3 from '@solana/web3.js';
+import Link from 'next/link';
 
 const SendSol = () => {
   const { connection } = useConnection();
@@ -94,9 +95,12 @@ const SendSol = () => {
           <div>
             {txSignature && (
               <div className="mt-5">
-                <p className="text-sm text-start">
-                  Transaction Signature: {txSignature}
-                </p>
+                <Link
+                  className="text-sm text-start text-primary cursor-pointer"
+                  href={`https://explorer.solana.com/tx/${txSignature}?cluster=devnet`}
+                >
+                  View Transaction
+                </Link>
               </div>
             )}
           </div>
