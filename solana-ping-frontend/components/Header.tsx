@@ -13,7 +13,7 @@ import {
 } from '@nextui-org/react';
 import { usePathname } from 'next/navigation';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-require("@solana/wallet-adapter-react-ui/styles.css");
+require('@solana/wallet-adapter-react-ui/styles.css');
 
 interface MenuItem {
   label: string;
@@ -60,7 +60,9 @@ export default function Header() {
         ))}
       </NavbarContent>
       <NavbarContent justify="end">
-        <WalletMultiButton />
+        <div className="hidden md:flex">
+          <WalletMultiButton />
+        </div>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           className="md:hidden"
@@ -82,9 +84,7 @@ export default function Header() {
         ))}
 
         <div>
-          <Button color="primary" variant="solid" radius="full">
-            Connect Wallet
-          </Button>
+          <WalletMultiButton />
         </div>
       </NavbarMenu>
     </Navbar>
